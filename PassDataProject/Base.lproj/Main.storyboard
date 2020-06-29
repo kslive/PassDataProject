@@ -47,6 +47,12 @@
                                     <action selector="goButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GQ9-NA-jSj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0B-1B-rcf">
+                                <rect key="frame" x="20" y="706" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -55,6 +61,9 @@
                             <constraint firstItem="IEH-1L-QRO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Hat-g0-ynV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IEH-1L-QRO" secondAttribute="trailing" constant="20" id="Llw-jq-6FH"/>
                             <constraint firstItem="cf7-Sv-6X4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Rmu-Y7-3ZZ"/>
+                            <constraint firstItem="Y0B-1B-rcf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bbX-dB-QIE"/>
+                            <constraint firstItem="cf7-Sv-6X4" firstAttribute="top" secondItem="Y0B-1B-rcf" secondAttribute="bottom" constant="100" id="eES-ds-h4F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y0B-1B-rcf" secondAttribute="trailing" constant="20" id="eee-FF-9EX"/>
                             <constraint firstItem="X6T-0c-NyK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="g4l-H2-gL1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X6T-0c-NyK" secondAttribute="trailing" constant="20" id="mJW-PF-KZi"/>
                             <constraint firstItem="IEH-1L-QRO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nuZ-eJ-JXn"/>
@@ -65,6 +74,7 @@
                     <connections>
                         <outlet property="loginTF" destination="7XW-HU-tcY" id="sYE-W1-AWc"/>
                         <outlet property="passwordTF" destination="Exy-PB-B8x" id="HOS-JI-fvN"/>
+                        <outlet property="resultLabel" destination="Y0B-1B-rcf" id="ZIC-rW-nUD"/>
                         <segue destination="gRw-To-f1Q" kind="show" identifier="detailSegue" id="JH7-Q5-kZL"/>
                     </connections>
                 </viewController>
@@ -111,9 +121,11 @@
                     <navigationItem key="navigationItem" id="0Wz-QJ-NMf"/>
                     <connections>
                         <outlet property="labelResult" destination="Hi1-Lz-Wue" id="baL-Ds-YDP"/>
+                        <segue destination="tKZ-BU-Qpc" kind="unwind" identifier="unwindSegue" unwindAction="unwindSegueToMainScreenWithSegue:" id="vIq-Bj-6Zg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDL-VP-bkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="tKZ-BU-Qpc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="849" y="119"/>
         </scene>
